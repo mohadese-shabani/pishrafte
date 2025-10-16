@@ -1,19 +1,16 @@
 public class Q1 {
-    int number;
     public static void main(String[] args) {
-        for(int num = 0 ; num < 20 ; num++){
-            if(isPrim(num))
-                System.out.println(num);
+        int p = 1;
+        for(int i = 1 ; i < 3 ; i++){
+            int m = tavan(i);
+            p = p + ( i/m );
+            System.out.println( p );
         }
+    } 
+    public static int tavan(int n){
+        int a = 3;
+        for(int i = 1 ; i < n ; i++)
+            a *= 3;
+        return a;    
     }
-     static boolean isPrim(int numebr){
-    if(number < 2)
-        return false;
-    for(int i = 2 ; i < number ; ++i){
-        if( number % i == 0)
-            return false;
-
-        return true;    
-    }    
-}
-}
+    }
